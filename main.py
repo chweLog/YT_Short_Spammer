@@ -52,13 +52,12 @@ if  __name__  ==  "__main__" :
         EC.element_to_be_clickable((By.XPATH,'//*[@id="comments-button"]/ytd-button-renderer/a'))
     ).click()
     while True:
-        driver.delete_all_cookies()
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH,'//*[@id="placeholder-area"]'))
         ).click()
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH,'//*[@id="contenteditable-root"]'))
-        ).send_keys(pick(5))
+        ).send_keys(pick(10))
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH,'//*[@id="submit-button"]/a'))
         ).click()    
